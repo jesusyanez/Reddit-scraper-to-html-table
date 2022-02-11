@@ -116,8 +116,8 @@ button, input, optgroup, select, textarea {
 }
 
 button {
-  overflow: visible
-  background-color:"green"
+  overflow: visible;
+  background-color: #0461d9
 }
 
 button, select {
@@ -3480,13 +3480,13 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 
 .btn-success {
   color: white;
-  background-color: #72b300;
+  background-color: #032488;
   border-color: #9cc85e
 }
 
 .btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success {
   color: white;
-  background-color: #6aa602;
+  background-color: #325ddf;
   border-color: #a9dd60
 }
 
