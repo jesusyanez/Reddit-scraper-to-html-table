@@ -1,1 +1,1 @@
-# Techline - CSV to Paginated JavaScript Table 
+# Reddit Scraper to HTML Table
