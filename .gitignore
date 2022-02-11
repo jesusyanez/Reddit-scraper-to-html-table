@@ -80,6 +80,7 @@ target/
 # IPython
 profile_default/
 ipython_config.py
+Mainlist.bat
 
 # pyenv
 .python-version
