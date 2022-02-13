@@ -58,27 +58,6 @@ def new_submissions(df):
 
     return new_sub_list, new_submission, df_current
 
-#creates timestamped csv file copy for data backup
-def csv_copy():
-    # pulls full csv to df and closes it
-    df_current = pd.read_csv('reddit_submissions.csv', index_col=0)
-    df_current2 = df_current
-    df_current.to_csv('reddit_submissions.csv')
-    # Import time to make second csv file with concatenated title
-    current_time = datetime.datetime.now()
-    title_time = current_time.strftime('_%m_%d_%Y_%H_%M')
-    time_concat = 'reddit_submissions' + title_time + '.csv'
-
-    # Creates new csv file
-    with open(time_concat, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["", "id", "direction", "title"])
-        writer.writerow(["", "", "", ""])
-
-    #saves dated version of csv file
-    df_current2.to_csv(time_concat)
-
-    return df_current2
 
 #clones csv database into site/HTML version csv
 def csv_copy_site():
@@ -104,7 +83,6 @@ def main():
     reddit = reddit_object()
     df = scrape_submissions_1000(reddit)
     new_sub_list, new_submission, df_current = new_submissions(df)
-    df_current2 = csv_copy()
     df_short = csv_copy_site()
     print("new submissions: ", new_submission.shape)
     print("Current Dataframe: ", df_current.shape)
